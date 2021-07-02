@@ -28,6 +28,7 @@ function StateDropDown({ stateList = {} }) {
 	}
 	function handleTabChange(e) {
 		setKey(e);
+		setSessions([]);
 		if (key === "2") {
 			setStateValue(null);
 			setDistrictValue(null);
@@ -49,7 +50,6 @@ function StateDropDown({ stateList = {} }) {
 					})
 					.then((json) => {
 						setSessions(json.sessions);
-						console.log(districtValues);
 					});
 			}
 		} else {
@@ -61,9 +61,7 @@ function StateDropDown({ stateList = {} }) {
 						return res.json();
 					})
 					.then((json) => {
-						// values = json;
-						// setDistrictValues(json.districts);
-						console.log(json);
+						setSessions(json.sessions);
 					});
 			}
 		}
@@ -143,7 +141,6 @@ function StateDropDown({ stateList = {} }) {
 								<div className="form-row">
 									<Button
 										type="primary"
-										size="large"
 										shape="round"
 										onClick={handleSubmitClick}>
 										Find Vaccine Slots
@@ -171,10 +168,9 @@ function StateDropDown({ stateList = {} }) {
 										onChange={(date) => setStartDate(date)}
 									/>
 								</div>
-								<div className="form-row" style={{ marginBottom: 62 }}>
+								<div className="form-row">
 									<Button
 										type="primary"
-										size="large"
 										shape="round"
 										onClick={handleSubmitClick}>
 										Find Vaccine Slots
@@ -183,7 +179,7 @@ function StateDropDown({ stateList = {} }) {
 							</Row>
 						</TabPane>
 					</Tabs>
-					<Sessions sessions={sessions} key={key} />
+					<Sessions sessions={sessions} tabName={key} />
 				</Col>
 				<Col span={1}></Col>
 			</Row>

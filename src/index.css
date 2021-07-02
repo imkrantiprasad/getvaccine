@@ -11,7 +11,6 @@ body {
 
 .container {
 	display: flex;
-	/* justify-content: space-between; */
 }
 
 .form-row {
@@ -30,22 +29,68 @@ body {
 	padding: 0;
 	padding: 7px 10px;
 }
-.react-datepicker__input-container input {
-	outline: none;
-	border: 1px solid gray;
-	border-radius: 10px;
-	padding: 7px 10px;
+
+ul,
+li {
+	margin: 0;
+	padding: 0;
 }
 
-/* .form-row button {
-	outline: none;
-	border: 2px solid black;
-	padding: 7px 10px;
-	background-color: rgb(243, 232, 218);
+.cards-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-.form-row button:hover {
-	color: #ffffff !important;
-	background: black;
-	transition: all 0.4s ease 0s;
-} */
+.cards-container li {
+	width: 32%;
+	border: 1px solid black;
+	margin-top: 10px;
+	padding: 7px;
+}
+
+.center-address h5 {
+	font-size: 13px;
+	text-transform: uppercase;
+	color: #002060;
+}
+
+.card-container .center-address {
+	font-size: 12px;
+	width: 70%;
+	position: relative;
+}
+
+.center-address p {
+	margin: 0;
+	padding: 0;
+}
+
+.vaccine-type-fee {
+	width: 30%;
+	/* float: right; */
+	color: #998fa2;
+	font-size: 14px;
+	font-weight: bold;
+	/* border: 1px solid red; */
+	bottom: 0;
+	right: 0;
+	position: absolute;
+}
+
+.vaccine-type-fee p {
+	color: white;
+	background-color: green;
+	/* margin: 0; */
+	/* padding: 0; */
+	padding: 1px 10px;
+	width: 50px;
+	border-radius: 20px;
+	font-size: 14px;
+	font-weight: lighter;
+}
+@media screen and (max-width: 600px) {
+	.cards-container li {
+		width: 100%;
+	}
+}

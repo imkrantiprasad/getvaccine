@@ -39,14 +39,15 @@ li {
 .cards-container {
 	display: flex;
 	flex-wrap: wrap;
-	justify-content: space-between;
+	justify-content: center;
 }
 
 .cards-container li {
 	width: 32%;
-	border: 1px solid black;
+	border: 1px solid #c7c2c2;
 	margin-top: 10px;
 	padding: 7px;
+	margin-right: 20px;
 }
 
 .center-address h5 {
@@ -68,29 +69,57 @@ li {
 
 .vaccine-type-fee {
 	width: 30%;
-	/* float: right; */
 	color: #998fa2;
 	font-size: 14px;
 	font-weight: bold;
-	/* border: 1px solid red; */
 	bottom: 0;
 	right: 0;
 	position: absolute;
+	padding-left: 10px;
 }
 
 .vaccine-type-fee p {
 	color: white;
 	background-color: green;
-	/* margin: 0; */
-	/* padding: 0; */
-	padding: 1px 10px;
-	width: 50px;
-	border-radius: 20px;
-	font-size: 14px;
-	font-weight: lighter;
+	padding: 0 8px;
+	width: 40px;
+	border-radius: 5px;
+	font-size: 12px;
+	font-weight: 400;
+	/* display: inline-block; */
+	/* margin-left: 10px; */
+}
+
+.card-container .age-limit {
+	width: 50%;
+}
+
+.card-container .age-limit .age-wrap {
+	color: white;
+	background-color: rgb(0, 162, 184);
+	border-radius: 5px;
+	padding: 0 4px;
+	width: 85px;
+	text-align: center;
+	/* width: 40%; */
+}
+
+.dose-details {
+	display: inline;
+	color: #998fa2;
+	right: 0;
+	/* border: 1px solid red; */
+	margin-left: auto;
+}
+
+.dose-number {
+	color: green;
+	font-weight: bold;
+	margin-right: 15px;
 }
 @media screen and (max-width: 600px) {
 	.cards-container li {
 		width: 100%;
+		margin-right: 0;
 	}
 }

@@ -35,6 +35,29 @@ function Sessions({ sessions, tabName }) {
 												<p>{session.fee_type}</p>
 											</div>
 										</div>
+										<div style={{ display: "flex", marginTop: 10 }}>
+											<div className="age-limit">
+												<div className="age-wrap">
+													{session.max_age_limit
+														? `${
+																session.min_age_limit +
+																" - " +
+																session.max_age_limit
+														  }`
+														: session.min_age_limit + " & Above"}
+												</div>
+											</div>
+											<div className="dose-details">
+												Dose 1{" "}
+												<span className="dose-number">
+													{session.available_capacity_dose1}
+												</span>
+												Dose 2{" "}
+												<span className="dose-number">
+													{session.available_capacity_dose2}
+												</span>
+											</div>
+										</div>
 									</div>
 								</li>
 							);

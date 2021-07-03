@@ -8,6 +8,52 @@ body {
 	background-color: whitesmoke;
 }
 
+#loader {
+	display: block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 50px;
+	width: 50px;
+	margin: -25px 0 0 -25px;
+	border: 4px rgba(0, 0, 0, 0.25) solid;
+	border-top: 10px #008744 solid;
+	border-right: 10px #0057e7 solid;
+	border-bottom: 10px #d62d20 solid;
+	border-left: 10px #ffa700 solid;
+	border-radius: 50%;
+	-webkit-animation: spin6 1s infinite linear;
+	animation: spin6 1s infinite linear;
+}
+
+@-webkit-keyframes spin6 {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
+@keyframes spin6 {
+	from {
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+		-webkit-transform: rotate(0deg);
+		transform: rotate(0deg);
+	}
+
+	to {
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+		-webkit-transform: rotate(359deg);
+		transform: rotate(359deg);
+	}
+}
+
 .main {
 	width: 98%;
 	background: #ffffff;

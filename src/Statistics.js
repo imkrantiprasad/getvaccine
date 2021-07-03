@@ -1,18 +1,9 @@
 import React from "react";
 
 function Statistics({ stats, date }) {
-	console.log("Stats:", stats);
 	return (
 		<div>
 			<div className="mid">
-				{/* <div className="flex-container">
-              <div className="h" id="box">Cases around India:</div>
-              <div className="total" id="box">Total: {this.state.con.totalCases}</div>
-              <div className="active" id="box">Active: {this.state.con.activeCases}</div>
-              <div className="recover" id="box">Cured: {this.state.con.recovered}</div>
-              <div className="death" id="box">Deaths: {this.state.con.deaths}</div>
-            </div>
-            <br /> */}
 				<table style={{ overflowX: "auto" }}>
 					<thead>
 						<tr>
@@ -24,8 +15,8 @@ function Statistics({ stats, date }) {
 						</tr>
 					</thead>
 					<tbody>
-						{stats.map((stat) => (
-							<tr>
+						{stats.map((stat, index) => (
+							<tr key={index}>
 								<td>{stat.state}</td>
 								<td id="total">{stat.noOfCases}</td>
 								<td id="active">{stat.noOfCases - stat.cured - stat.deaths}</td>
@@ -36,7 +27,7 @@ function Statistics({ stats, date }) {
 					</tbody>
 				</table>
 				<br />
-				{/* As on: {date.substring(0, 9)} */}
+				As on: {date.substring(0, 8)}
 			</div>
 		</div>
 	);

@@ -2,7 +2,7 @@ import React from "react";
 
 function Sessions({ sessions, tabName }) {
 	// const tabs = ["tabName"]
-	console.log(sessions);
+	// console.log(sessions);
 	if (sessions && sessions.length) {
 		return (
 			<>

@@ -67,7 +67,7 @@ function Sessions({ sessions, tabName }) {
 			</>
 		);
 	} else {
-		return <div>No Result</div>;
+		return <div></div>;
 	}
 }
 

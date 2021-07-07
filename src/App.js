@@ -51,9 +51,16 @@ function App() {
 		return (
 			<div className="main">
 				<div className="stats-section">
-					<h1>{statsFor === "1" ? "India's " : "All State/UTs "} Statistics</h1>
-					Click<span onClick={handleStatsChange}> here </span>to check{" "}
-					{statsFor === "2" ? "India's " : "all State/UTs "} Statistics.
+					<h1 style={{ color: "#002060" }}>
+						{statsFor === "1" ? "India's " : "All State/UTs "} Statistics
+					</h1>
+					Click
+					<span onClick={handleStatsChange} style={{ cursor: "pointer" }}>
+						{" "}
+						here{" "}
+					</span>
+					to check {statsFor === "2" ? "India's " : "all State/UTs "}{" "}
+					Statistics.
 				</div>
 				<Statistic stats={statsFor === "1" ? con : stats} date={date} />
 				<hr style={{ width: 300, marginTop: 20, marginBottom: 20 }} />

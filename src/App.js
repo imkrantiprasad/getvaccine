@@ -7,7 +7,7 @@ function App() {
 	const [options, setOptions] = useState([]);
 	const [stats, setStats] = useState([]);
 	const [con, setCon] = useState([]);
-	const date = new Date().toLocaleString();
+	const date = new Date().toDateString();
 	const [statsFor, setStatsFor] = useState("1");
 	const [isLoaded, setIsLoaded] = useState(false);
 

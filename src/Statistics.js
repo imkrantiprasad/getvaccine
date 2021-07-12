@@ -27,7 +27,7 @@ function Statistics({ stats, date }) {
 					</tbody>
 				</table>
 				<br />
-				As on: {date.substring(0, 8)}
+				As on: {date}
 			</div>
 		</div>
 	);

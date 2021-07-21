@@ -51,7 +51,7 @@ function App() {
 				// console.log(response.json());
 			})
 			.then((json) => {
-				console.log(json.articles);
+				// console.log(json.articles);
 				setNewsData(json.articles);
 			})
 			.catch((err) => {

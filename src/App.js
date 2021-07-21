@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import StateDropDown from "./StateDropDown";
 import "antd/dist/antd.css";
 import Statistic from "./Statistics";
+import Header from "./Header";
 
 function App() {
 	const [options, setOptions] = useState([]);
@@ -50,6 +51,7 @@ function App() {
 	} else {
 		return (
 			<div className="main">
+				<Header />
 				<div className="stats-section">
 					<h1 style={{ color: "#002060" }}>
 						{statsFor === "1" ? "India's " : "All State/UTs "} Statistics

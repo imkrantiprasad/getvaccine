@@ -8,7 +8,7 @@ function News({ newsData }) {
 				<h1>Articles</h1>
 			</div>
 			<div className="news-wrapper">
-				<Carousel>
+				<Carousel autoplay effect="fade">
 					{newsData.map((news, index) => (
 						<div key={index} className="news">
 							<div>

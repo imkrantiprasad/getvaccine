@@ -11,6 +11,7 @@ function App() {
 	const date = new Date().toDateString();
 	const [statsFor, setStatsFor] = useState("1");
 	const [isLoaded, setIsLoaded] = useState(false);
+	const [newsData, setNewsData] = useState({});
 
 	useEffect(() => {
 		fetch("https://covid-india-cases.herokuapp.com/states/")
@@ -41,6 +42,25 @@ function App() {
 			})
 			.then((json) => {
 				setOptions(json);
+			});
+
+		fetch(
+			"https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=7e4101d7cdad4150b6a9bf7abb56c833",
+			{
+				credentials: "include",
+				mode: "no-cors",
+			}
+		)
+			.then((response) => {
+				return response.json();
+				// console.log(response.json());
+			})
+			.then((json) => {
+				console.log(json);
+				setNewsData(json);
+			})
+			.catch((err) => {
+				console.error(err);
 			});
 	}, []);
 	function handleStatsChange() {

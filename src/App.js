@@ -3,6 +3,7 @@ import StateDropDown from "./StateDropDown";
 import "antd/dist/antd.css";
 import Statistic from "./Statistics";
 import Header from "./Header";
+import News from "./News";
 
 function App() {
 	const [options, setOptions] = useState([]);
@@ -11,7 +12,7 @@ function App() {
 	const date = new Date().toDateString();
 	const [statsFor, setStatsFor] = useState("1");
 	const [isLoaded, setIsLoaded] = useState(false);
-	const [newsData, setNewsData] = useState({});
+	const [newsData, setNewsData] = useState([]);
 
 	useEffect(() => {
 		fetch("https://covid-india-cases.herokuapp.com/states/")
@@ -44,16 +45,14 @@ function App() {
 				setOptions(json);
 			});
 
-		fetch(
-			"https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=7e4101d7cdad4150b6a9bf7abb56c833"
-		)
+		fetch("https://saurav.tech/NewsAPI/top-headlines/category/health/in.json")
 			.then((response) => {
 				return response.json();
 				// console.log(response.json());
 			})
 			.then((json) => {
-				console.log(json);
-				setNewsData(json);
+				console.log(json.articles);
+				setNewsData(json.articles);
 			})
 			.catch((err) => {
 				console.error(err);
@@ -85,9 +84,11 @@ function App() {
 				<div className="stats-section">
 					<h1>Track Vaccine</h1>
 				</div>
-				<div className="drop-down" style={{ paddingBottom: 150 }}>
-					<StateDropDown newsData={newsData} stateList={options} />
+				<div className="drop-down">
+					<StateDropDown stateList={options} />
 				</div>
+				<hr style={{ width: 300, marginTop: 20, marginBottom: 20 }} />
+				<News newsData={newsData} />
 			</div>
 		);
 	}

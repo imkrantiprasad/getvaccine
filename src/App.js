@@ -45,11 +45,7 @@ function App() {
 			});
 
 		fetch(
-			"https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=7e4101d7cdad4150b6a9bf7abb56c833",
-			{
-				credentials: "include",
-				mode: "no-cors",
-			}
+			"https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=7e4101d7cdad4150b6a9bf7abb56c833"
 		)
 			.then((response) => {
 				return response.json();

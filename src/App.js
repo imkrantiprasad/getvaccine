@@ -86,7 +86,7 @@ function App() {
 					<h1>Track Vaccine</h1>
 				</div>
 				<div className="drop-down" style={{ paddingBottom: 150 }}>
-					<StateDropDown stateList={options} />
+					<StateDropDown newsData={newsData} stateList={options} />
 				</div>
 			</div>
 		);

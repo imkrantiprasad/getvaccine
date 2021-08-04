@@ -63,6 +63,15 @@ function Sessions({ sessions, tabName }) {
 							);
 						})}
 					</ul>
+					<p style={{ textAlign: "center" }}>
+						To book your slot please head towards{" "}
+						<a
+							href="https://www.cowin.gov.in/"
+							target="_blank"
+							rel="noreferrer">
+							COWIN
+						</a>
+					</p>
 				</div>
 			</>
 		);

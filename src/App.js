@@ -4,6 +4,7 @@ import "antd/dist/antd.css";
 import Statistic from "./Statistics";
 import Header from "./Header";
 import News from "./News";
+import Footer from "./Footer";
 
 function App() {
 	const [options, setOptions] = useState([]);
@@ -89,6 +90,7 @@ function App() {
 				</div>
 				<hr style={{ width: 300, marginTop: 20, marginBottom: 20 }} />
 				<News newsData={newsData} />
+				<Footer />
 			</div>
 		);
 	}
